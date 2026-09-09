@@ -5,7 +5,7 @@ SRC_DIR   := src
 BUILD_DIR := obj
 
 SRCS := $(shell find $(SRC_DIR) ../src -name '*.c')
-OBJS := $(patsubst $(SRC_DIR)/%.c,$(BUILD_DIR)/%.o,$(SRCS))
+OBJS := $(addprefix $(BUILD_DIR)/,$(notdir $(SRCS:.c=.o)))
 
 TARGET := web/creact.js
 
