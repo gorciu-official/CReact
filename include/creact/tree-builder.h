@@ -1,6 +1,6 @@
 #pragma once
 
-#include "nodes.h"
+#include "creact/nodes.h"
 
 #define CR_ATTR(attr_name, attr_value) \
     ((creact_element_attribute_t){ \

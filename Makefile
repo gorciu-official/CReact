@@ -4,7 +4,7 @@ CFLAGS   := $(shell tr '\n' ' ' < compile_flags.txt)
 SRC_DIR   := src
 BUILD_DIR := obj
 
-SRCS := $(shell find $(SRC_DIR) -name '*.c')
+SRCS := $(shell find $(SRC_DIR) ../src -name '*.c')
 OBJS := $(patsubst $(SRC_DIR)/%.c,$(BUILD_DIR)/%.o,$(SRCS))
 
 TARGET := web/creact.js

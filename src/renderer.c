@@ -1,5 +1,5 @@
 #include <emscripten.h>
-#include "renderer.h"
+#include "creact/renderer.h"
 
 EM_JS(void, creact_remove_startup_notice, (), {
     document.querySelectorAll('[data-creact-remove-on-startup=true]').forEach((el) => el.remove());
