@@ -16,7 +16,7 @@ $(TARGET): $(OBJS)
 
 $(BUILD_DIR)/%.o:
 	@mkdir -p $(dir $@)
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $(filter %/$*.c,$(SRCS)) -o $@
 
 clean:
 	rm -rf $(BUILD_DIR) $(TARGET)
