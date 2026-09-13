@@ -15,7 +15,7 @@ all: $(TARGET)
 
 $(TARGET): $(OBJS)
 	@envsubst < web/index.html.template > web/index.html
-	@if [[ -d ../assets ]]; then ln -sfn ../../assets web/assets; fi
+	@if [ -d ../assets ]; then rm -rf web/assets && cp -r ../assets web/assets; fi
 	$(CC) $(OBJS) -o $@
 	sed -i 's/creact\.wasm/creact.txt/g' web/creact.js
 	mv web/creact.wasm web/creact.txt
