@@ -16,7 +16,7 @@ all: $(TARGET)
 $(TARGET): $(OBJS)
 	@envsubst < web/index.html.template > web/index.html
 	@if [[ -d ../assets ]]; then ln -sfn ../../assets web/assets; fi
-	$(CC) -sWASM=1 -sSINGLE_FILE=1 $(OBJS) -o $@
+	$(CC) -sSINGLE_FILE=1 $(OBJS) -o $@
 
 obj/%.o: src/%.c
 	@mkdir -p $(@D)
