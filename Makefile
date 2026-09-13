@@ -14,7 +14,7 @@ TARGET := web/creact.js
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-	@envsubst < shell.html.template > shell.html
+	@envsubst < web/index.html.template > web/index.html
 	@if [[ -d ../assets ]]; then ln -sfn ../../assets web/assets; fi
 	$(CC) $(OBJS) -o $@
 
