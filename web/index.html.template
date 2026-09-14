@@ -2,10 +2,12 @@
 <html>
 <head>
     <title>${CREACT_WEBSITE_TITLE}</title>
+    ${CREACT_EXTRA_HEAD_HTML}
 </head>
 <body>
     <p data-creact-remove-on-startup="true">This website is written entirelly in C using <a href="https://github.com/gorciu-official/CReact">CReact</a>. To view this website, you need to enable JavaScript (for bootstrap) and WebAssembly support in your browser.</p>
     <div id="creact-root"></div>
+    ${CREACT_EXTRA_BODY_HTML}
     <script src="./creact.js"></script>
 </body>
 </html>
